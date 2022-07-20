@@ -3,13 +3,11 @@ import { ref } from 'vue';
 
 const p = ref(null);
 
-const name = 'john';
-const age = 45;
+const name = ref('john');
+const age = ref(46);
 
 const handleClick = () => {
-  console.log(p, p.value);
-  p.value.classList.add('test');
-  p.value.textContent = 'hello, skater';
+  name.value = 'luigi';
 };
 </script>
 
@@ -18,5 +16,7 @@ const handleClick = () => {
     home
     <p ref="p">my name is {{ name }} and my age is: {{ age }}</p>
     <button @click="handleClick">click me</button>
+    <button @click="age++">add to age</button>
+    <input type="text" v-model="name" />
   </main>
 </template>
