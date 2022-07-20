@@ -1,29 +1,25 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
+import PostList from '../components/PostList.vue';
 
-const search = ref('');
-const names = ref([
-  'mario',
-  'yoshi',
-  'luigi',
-  'toad',
-  'bowser',
-  'koopa',
-  'peach',
+const posts = ref([
+  {
+    title: 'welcome to the blog',
+    body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, praesentium! Pariatur itaque, voluptatem velit, excepturi accusantium adipisci perspiciatis voluptates aperiam odio, nam vel ad sapiente asperiores. Voluptas, maiores. Distinctio, architecto!',
+    id: 1,
+  },
+  { title: 'top 5 CSS tips', body: 'lorem ipsum', id: 2 },
 ]);
-
-const matchingNames = computed(() => {
-  return names.value.filter((name) => name.includes(search.value));
-});
 </script>
 
 <template>
   <main>
     <h1>Home</h1>
-    <input type="text" v-model="search" />
-    <p>search term: {{ search }}</p>
-    <ul>
-      <li v-for="name in matchingNames" :key="name">{{ name }}</li>
-    </ul>
+    <PostList :posts="posts" />
   </main>
 </template>
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, praesentium!
+Pariatur itaque, voluptatem velit, excepturi accusantium adipisci perspiciatis
+voluptates aperiam odio, nam vel ad sapiente asperiores. Voluptas, maiores.
+Distinctio, architecto!
