@@ -1,16 +1,22 @@
 <script setup>
+import { ref } from 'vue';
+
+const p = ref(null);
+
 const name = 'john';
 const age = 45;
 
 const handleClick = () => {
-  console.log('you clicked me');
+  console.log(p, p.value);
+  p.value.classList.add('test');
+  p.value.textContent = 'hello, skater';
 };
 </script>
 
 <template>
   <main>
     home
-    <p>my name is {{ name }} and my age is: {{ age }}</p>
+    <p ref="p">my name is {{ name }} and my age is: {{ age }}</p>
     <button @click="handleClick">click me</button>
   </main>
 </template>
