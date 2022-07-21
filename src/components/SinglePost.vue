@@ -4,7 +4,7 @@ import { computed } from 'vue';
 const props = defineProps(['post']);
 
 const snippet = computed(() => {
-  return props.post.body.substring(0, 50) + '....';
+  return props.post.body.substring(0, 100) + '....';
 });
 </script>
 

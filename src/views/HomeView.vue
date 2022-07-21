@@ -2,24 +2,32 @@
 import { ref } from 'vue';
 import PostList from '../components/PostList.vue';
 
-const posts = ref([
-  {
-    title: 'welcome to the blog',
-    body: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, praesentium! Pariatur itaque, voluptatem velit, excepturi accusantium adipisci perspiciatis voluptates aperiam odio, nam vel ad sapiente asperiores. Voluptas, maiores. Distinctio, architecto!',
-    id: 1,
-  },
-  { title: 'top 5 CSS tips', body: 'lorem ipsum', id: 2 },
-]);
+const posts = ref([]);
+const error = ref(null);
+
+const load = async () => {
+  try {
+    let data = await fetch('http://localhost:3000/posts');
+    if (!data.ok) {
+      throw Error('no data available');
+    }
+    posts.value = await data.json();
+  } catch (err) {
+    error.value = err.message;
+    console.log(error.value);
+  }
+};
+
+load();
 </script>
 
 <template>
   <main>
     <h1>Home</h1>
-    <PostList :posts="posts" />
+    <div v-if="error">{{ error }}</div>
+    <div v-if="posts.length">
+      <PostList :posts="posts" />
+    </div>
+    <div v-else>Loading...</div>
   </main>
 </template>
-
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, praesentium!
-Pariatur itaque, voluptatem velit, excepturi accusantium adipisci perspiciatis
-voluptates aperiam odio, nam vel ad sapiente asperiores. Voluptas, maiores.
-Distinctio, architecto!
