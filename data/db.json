@@ -4,13 +4,31 @@
       "id": 1,
       "title": "welcome to the new blog",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget. Pellentesque diam volutpat commodo sed egestas. Quis blandit turpis cursus in hac habitasse. Non curabitur gravida arcu ac tortor dignissim. Arcu dui vivamus arcu felis bibendum ut tristique. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Libero nunc consequat interdum varius sit amet mattis. Nisl nisi scelerisque eu ultrices vitae auctor eu augue. Leo a diam sollicitudin tempor. Ornare massa eget egestas purus viverra. Ullamcorper malesuada proin libero nunc consequat interdum varius sit amet. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Suspendisse in est ante in nibh. Est ultricies integer quis auctor elit. Imperdiet proin fermentum leo vel. Pharetra vel turpis nunc eget.",
-      "tags": ["webdev", "coding", "news"]
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
     },
     {
       "id": 2,
       "title": "top 5 CSS tips",
       "body": "Luctus accumsan tortor posuere ac ut consequat semper. Nunc scelerisque viverra mauris in. Aliquet enim tortor at auctor. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Sagittis vitae et leo duis ut diam quam nulla. Vulputate ut pharetra sit amet aliquam id. Nisl purus in mollis nunc sed id semper risus in. Purus gravida quis blandit turpis. Amet est placerat in egestas erat imperdiet sed. Convallis posuere morbi leo urna. Faucibus ornare suspendisse sed nisi lacus sed. Volutpat est velit egestas dui id. In pellentesque massa placerat duis ultricies lacus sed turpis. Consectetur adipiscing elit ut aliquam purus sit amet luctus. Id porta nibh venenatis cras sed felis eget velit. Semper feugiat nibh sed pulvinar proin gravida hendrerit. Sed odio morbi quis commodo odio aenean sed adipiscing. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Ultricies mi eget mauris pharetra et ultrices neque ornare. Etiam non quam lacus suspendisse.",
-      "tags": ["css", "webdev", "coding"]
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "test post ",
+      "body": "lorem ipsums. stoked to try to get this to work",
+      "tags": [
+        "html",
+        "css",
+        "vuejs"
+      ],
+      "id": 3
     }
   ]
 }
