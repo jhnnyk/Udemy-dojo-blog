@@ -6,4 +6,8 @@ import { RouterLink, RouterView } from 'vue-router';
   <RouterView />
 </template>
 
-<style></style>
+<style>
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+</style>
