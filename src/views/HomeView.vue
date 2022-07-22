@@ -1,6 +1,7 @@
 <script setup>
 import PostList from '../components/PostList.vue';
 import getPosts from '../composables/getPosts';
+import LoadingSpinner from '../components/LoadingSpinner.vue';
 
 const { posts, error, load } = getPosts();
 load();
@@ -13,6 +14,6 @@ load();
     <div v-if="posts.length">
       <PostList :posts="posts" />
     </div>
-    <div v-else>Loading...</div>
+    <div v-else><LoadingSpinner /></div>
   </main>
 </template>

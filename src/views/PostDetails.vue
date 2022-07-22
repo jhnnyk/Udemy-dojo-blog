@@ -1,5 +1,6 @@
 <script setup>
 import getPost from '../composables/getPost';
+import LoadingSpinner from '../components/LoadingSpinner.vue';
 
 const props = defineProps(['id']);
 
@@ -14,6 +15,7 @@ load();
     <h3>{{ post.title }}</h3>
     <p class="pre">{{ post.body }}</p>
   </div>
+  <div v-else><LoadingSpinner /></div>
 </template>
 
 <style>
