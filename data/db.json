@@ -29,6 +29,15 @@
         "vuejs"
       ],
       "id": 3
+    },
+    {
+      "title": "another test Post",
+      "body": "lorem ipsum content here. blaa, blaa, blaa",
+      "tags": [
+        "webdev",
+        "css"
+      ],
+      "id": 4
     }
   ]
 }

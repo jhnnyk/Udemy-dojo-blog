@@ -1,9 +1,13 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
 const title = ref('');
 const body = ref('');
 const tag = ref('');
 const tags = ref([]);
+
+const router = useRouter();
 
 const addTag = () => {
   if (!tags.value.includes(tag.value)) {
@@ -25,6 +29,8 @@ const handleSubmit = async () => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(post),
   });
+
+  router.push({ name: 'Home' });
 };
 </script>
 
